@@ -20,7 +20,7 @@ const handleUpdate = () => {
     const n = {
       name:name
     }
-    axios.put(`http://localhost:5000/products/${currId}`,n)
+    axios.put(`https://backend-server-343.onrender.com/products/${currId}`,n)
     .then((r)=>{
       console.log("successfully name updated")
           })
@@ -29,7 +29,7 @@ const handleUpdate = () => {
     const n = {
       price:price
     }
-    axios.put(`http://localhost:5000/products/${currId}`,n)
+    axios.put(`https://backend-server-343.onrender.com/products/${currId}`,n)
     .then((r)=>{
 console.log("successfully price updated")
     })
@@ -55,7 +55,7 @@ console.log("successfully price updated")
   
  useEffect(() => {
   // notify()
-  const data =axios.get('http://localhost:5000/products')
+  const data =axios.get('https://backend-server-343.onrender.com/products')
  data 
   .then((response) => {
   setDetails(  response.data.data.map((arr)=>{
@@ -70,7 +70,7 @@ console.log("successfully price updated")
 
 }, []);
 const deleteMethod = (id ) => {
-  axios.delete(`http://localhost:5000/products/${id}`)
+  axios.delete(`https://backend-server-343.onrender.com/products/${id}`)
   
   .then((res)=>{
     console.log("successfully deleted")

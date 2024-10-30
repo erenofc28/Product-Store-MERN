@@ -14,7 +14,7 @@ const d = {
   price:price,
   image:image
 }
-axios.post("http://localhost:5000/products",d)
+axios.post("https://backend-server-343.onrender.com/products",d)
 
 .then((res)=>{
   console.log("successfully added")
